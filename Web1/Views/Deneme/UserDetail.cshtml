@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Web1.Models.User
+@{
+}
+
+<div class="row">
+    <div class="col-3">
+        ID
+    </div>
+    <div class="col-1">
+        :
+    </div>
+    <div class="col-4">
+        @Model.Id
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        Name
+    </div>
+    <div class="col-1">
+        :
+    </div>
+    <div class="col-4">
+        @Model.Name
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        Lastname
+    </div>
+    <div class="col-1">
+        :
+    </div>
+    <div class="col-4">
+        @Model.LastName
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        Birthdate
+    </div>
+    <div class="col-1">
+        :
+    </div>
+    <div class="col-4">
+        @Model.BirthDate.ToShortDateString()
+    </div>
+</div>
+
+

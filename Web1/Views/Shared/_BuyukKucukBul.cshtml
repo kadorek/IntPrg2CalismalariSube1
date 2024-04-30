@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<int>
+@if (Model is not null)
+{
+
+    var buyuk = Model.Max();
+    var kucuk = Model.Min();
+
+    <div class="row">
+        <div class="col-3">
+            <b>Büyük</b>
+        </div>
+        <div class="col-1">
+            :
+        </div>
+        <div class="col-8">
+            @buyuk
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <b>Küçük</b>
+        </div>
+        <div class="col-1">
+            :
+        </div>
+        <div class="col-8">
+            @kucuk
+        </div>
+    </div>
+}
+else
+{
+    <div>model is null</div>
+}

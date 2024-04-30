@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web1", "Web1\Web1.csproj", "{92A2725C-579A-426A-8D6C-C5CC6730D6A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fihrist", "Fihrist\Fihrist.csproj", "{8A61268C-DD0C-4ED1-95FA-86D6644A412D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92A2725C-579A-426A-8D6C-C5CC6730D6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A2725C-579A-426A-8D6C-C5CC6730D6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A2725C-579A-426A-8D6C-C5CC6730D6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A2725C-579A-426A-8D6C-C5CC6730D6A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A61268C-DD0C-4ED1-95FA-86D6644A412D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A61268C-DD0C-4ED1-95FA-86D6644A412D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A61268C-DD0C-4ED1-95FA-86D6644A412D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A61268C-DD0C-4ED1-95FA-86D6644A412D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {911A48D2-C876-4812-BA3D-03D48EC72E9C}
+	EndGlobalSection
+EndGlobal
