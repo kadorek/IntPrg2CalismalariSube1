@@ -2,9 +2,8 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Razor.Language.Intermediate;
+
 using System.Security.Claims;
-using System.Security.Cryptography.Pkcs;
 
 namespace Fihrist.Controllers
 {

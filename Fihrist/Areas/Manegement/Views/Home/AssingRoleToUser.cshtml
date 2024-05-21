@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Fihrist.Models.RoleUser
+@{
+    var rollist = ViewBag.roleselect as SelectList;
+    var userlist = ViewBag.userselect as SelectList;
+}
+
+<div class="row">
+    <div class="col-12">
+kullanıcılar:
+    </div>
+    <div class="col-12">
+        <select asp-for="UserId" asp-items="@userlist"></select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+roller:
+    </div>
+    <div class="col-12">
+        <select asp-for="@rollist"></select>
+    </div>
+</div>

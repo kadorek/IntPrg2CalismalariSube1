@@ -13,7 +13,7 @@ public partial class Info
 
     public string Value { get; set; } = null!;
 
-    public virtual Person? Person { get; set; }
+    public virtual Person Person { get; set; } = null!;
 
-    public virtual Type? Type { get; set; } 
+    public virtual Type Type { get; set; } = null!;
 }

@@ -12,4 +12,6 @@ public partial class User
     public string Password { get; set; } = null!;
 
     public string Email { get; set; } = null!;
+
+    public virtual ICollection<RoleUser> RoleUsers { get; set; } = new List<RoleUser>();
 }
