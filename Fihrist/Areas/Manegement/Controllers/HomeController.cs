@@ -27,5 +27,23 @@ namespace Fihrist.Areas.Manegement.Controllers
             ViewBag.userselect = userselect; //Viewbage kullanıcıselect lisetesi eklendi.
             return View(); 
         }
+        [HttpPost]
+        public IActionResult SaveRole(RoleUser data)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    throw new Exception("Model Hatalı");
+                }
+                context.RoleUsers.Add(data);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return View("AssingRoleToUser",data);
+            }
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

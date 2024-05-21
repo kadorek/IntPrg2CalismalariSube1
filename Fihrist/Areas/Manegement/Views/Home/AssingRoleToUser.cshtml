@@ -6,21 +6,25 @@
     var rollist = ViewBag.roleselect as SelectList;
     var userlist = ViewBag.userselect as SelectList;
 }
+<form method="post" action="@Url.Action("SaveRole", "Home", new{area="Manegement"})">
+    <div class="row">
+        <div class="col-12">
+            kullanıcılar:
+        </div>
+        <div class="col-12">
+            <select asp-for="UserId" asp-items="@userlist"></select>
+        </div>
+    </div>
 
-<div class="row">
-    <div class="col-12">
-kullanıcılar:
+    <div class="row">
+        <div class="col-12">
+            roller:
+        </div>
+        <div class="col-12">
+            <select asp-for="RoleId" asp-items="@rollist"></select>
+        </div>
     </div>
-    <div class="col-12">
-        <select asp-for="UserId" asp-items="@userlist"></select>
+    <div>
+        <button type="submit">Kaydet</button>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-12">
-roller:
-    </div>
-    <div class="col-12">
-        <select asp-for="@rollist"></select>
-    </div>
-</div>
+</form>
