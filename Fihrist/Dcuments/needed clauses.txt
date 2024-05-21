@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=.\data\fihrist.db" Microsoft.EntityFrameworkCore.Sqlite -OutputDir Models -Context FihristContext -force
