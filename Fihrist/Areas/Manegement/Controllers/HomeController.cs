@@ -1,10 +1,12 @@
 ﻿using Fihrist.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Fihrist.Areas.Manegement.Controllers
 {
     [Area("Manegement")]
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly FihristContext context;
@@ -13,6 +15,7 @@ namespace Fihrist.Areas.Manegement.Controllers
         {
             context = new FihristContext();  
         }
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
@@ -43,7 +46,7 @@ namespace Fihrist.Areas.Manegement.Controllers
             {
                 return View("AssingRoleToUser",data);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home", new { area="" });
         }
     }
 }
