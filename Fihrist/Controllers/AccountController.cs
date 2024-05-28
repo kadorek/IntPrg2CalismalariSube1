@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace Fihrist.Controllers
@@ -29,11 +29,15 @@ namespace Fihrist.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromForm, Bind("Username", "Password")] User dataUser)
         {
-            var user = context.Users.FirstOrDefault(x => x.Username == dataUser.Username && x.Password == dataUser.Password);
+            var user = context.Users.Include("") .FirstOrDefault(x => x.Username == dataUser.Username && x.Password == dataUser.Password);
             if (user == null)
             {
                 return View(dataUser);
             }
+
+
+            //var allUserRoles= 
+
 
             var claims = new List<Claim> {
                 new Claim(ClaimTypes.Email,user.Email),

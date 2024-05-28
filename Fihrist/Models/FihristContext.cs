@@ -60,6 +60,10 @@ public partial class FihristContext : DbContext
         {
             entity.ToTable("RoleUser");
 
+            entity.HasOne(d => d.Role).WithMany(p => p.RoleUsers)
+                .HasForeignKey(d => d.RoleId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+
             entity.HasOne(d => d.User).WithMany(p => p.RoleUsers)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull);

@@ -10,4 +10,6 @@ public partial class Role
     public string Name { get; set; } = null!;
 
     public int IsActive { get; set; }
+
+    public virtual ICollection<RoleUser> RoleUsers { get; set; } = new List<RoleUser>();
 }
